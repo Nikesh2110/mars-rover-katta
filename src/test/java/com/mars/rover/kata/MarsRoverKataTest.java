@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import javax.swing.*;
-
 public class MarsRoverKataTest
 {
     @Test
@@ -24,9 +22,17 @@ public class MarsRoverKataTest
     }
 
     @Test
-    void moveRoverForward()
+    void moveRoverForwardWhenFacingNorth()
     {
         MarsRover marsRover = new MarsRover("N", new int[]{1,1});
         assertArrayEquals(new int[]{1,2}, marsRover.moveForward('F'));
     }
+
+    @Test
+    void moveRoverForwardWhenFacingEast()
+    {
+        MarsRover marsRover = new MarsRover("E", new int[]{1,1});
+        assertArrayEquals(new int[]{2,1}, marsRover.moveForward('F'));
+    }
+
 }

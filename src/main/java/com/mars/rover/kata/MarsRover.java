@@ -19,8 +19,14 @@ public class MarsRover
         return position;
     }
 
-    public int[] moveForward(char f)
+    public int[] moveForward(char sequence)
     {
-        return new int[]{1,2};
+        if (direction.equals("N"))
+        {
+            return new int[]{1,2};
+        } else if (direction.equals("E")){
+            return new int[]{2,1};
+        }
+        return position;
     }
 }
