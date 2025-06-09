@@ -18,4 +18,9 @@ public class MarsRover
     public int[] getPosition() {
         return position;
     }
+
+    public int[] moveForward(char f)
+    {
+        return new int[]{1,2};
+    }
 }

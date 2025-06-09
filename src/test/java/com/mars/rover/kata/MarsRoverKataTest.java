@@ -12,16 +12,21 @@ public class MarsRoverKataTest
     @Test
     void getRoverDirection()
     {
-        int[] expectedPosition = {1,1};
-        MarsRover marsRover = new MarsRover("N", expectedPosition);
+        MarsRover marsRover = new MarsRover("N", new int[] {1,1});
         assertEquals("N", marsRover.getDirection());
     }
 
     @Test
     void getRoverPosition()
     {
-        int[] expectedPosition = {1,1};
-        MarsRover marsRover = new MarsRover("N", expectedPosition);
+        MarsRover marsRover = new MarsRover("N", new int[] {1,1});
         assertArrayEquals(new int[]{1, 1}, marsRover.getPosition());
+    }
+
+    @Test
+    void moveRoverForward()
+    {
+        MarsRover marsRover = new MarsRover("N", new int[]{1,1});
+        assertArrayEquals(new int[]{1,2}, marsRover.moveForward('F'));
     }
 }
