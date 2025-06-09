@@ -9,7 +9,9 @@ public class MarsRoverKataTest
     @Test
     void getRoverDirection()
     {
-        MarsRoverDirection marsRoverDirection = new MarsRoverDirection();
-        assertEquals("N", marsRoverDirection.getMarsRoverDirection() );
+        MarsRover marsRover = new MarsRover("N");
+        assertEquals("N", marsRover.getDirection() );
     }
+
+
 }
