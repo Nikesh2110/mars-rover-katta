@@ -35,4 +35,11 @@ public class MarsRoverKataTest
         assertArrayEquals(new int[]{2,1}, marsRover.moveForward('F'));
     }
 
+    @Test
+    void moveRoverForwardWhenFacingSouth()
+    {
+        MarsRover marsRover = new MarsRover("S", new int[]{1,1});
+        assertArrayEquals(new int[]{1,0}, marsRover.moveForward('F'));
+    }
+
 }

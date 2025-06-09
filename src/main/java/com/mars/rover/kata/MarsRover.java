@@ -26,6 +26,8 @@ public class MarsRover
             return new int[]{1,2};
         } else if (direction.equals("E")){
             return new int[]{2,1};
+        } else if (direction.equals("S")){
+            return new int[]{1,0};
         }
         return position;
     }
